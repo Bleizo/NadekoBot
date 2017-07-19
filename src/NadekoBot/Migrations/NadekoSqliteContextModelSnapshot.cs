@@ -1213,6 +1213,43 @@ namespace NadekoBot.Migrations
                     b.ToTable("SlowmodeIgnoredUser");
                 });
 
+            modelBuilder.Entity("NadekoBot.Services.Database.Models.StarGuild", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<ulong?>("ChannelId");
+
+                    b.Property<DateTime?>("DateAdded");
+
+                    b.Property<ulong>("GuildId");
+
+                    b.Property<int>("Required");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StarGuilds");
+                });
+
+            modelBuilder.Entity("NadekoBot.Services.Database.Models.StarMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime?>("DateAdded");
+
+                    b.Property<int?>("GuildId")
+                        .IsRequired();
+
+                    b.Property<ulong>("MessageId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GuildId");
+
+                    b.ToTable("StarMessages");
+                });
+
             modelBuilder.Entity("NadekoBot.Services.Database.Models.StartupCommand", b =>
                 {
                     b.Property<int>("Id")
@@ -1836,6 +1873,14 @@ namespace NadekoBot.Migrations
                     b.HasOne("NadekoBot.Services.Database.Models.GuildConfig")
                         .WithMany("SlowmodeIgnoredUsers")
                         .HasForeignKey("GuildConfigId");
+                });
+
+            modelBuilder.Entity("NadekoBot.Services.Database.Models.StarMessage", b =>
+                {
+                    b.HasOne("NadekoBot.Services.Database.Models.StarGuild", "Guild")
+                        .WithMany("StarMessages")
+                        .HasForeignKey("GuildId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("NadekoBot.Services.Database.Models.StartupCommand", b =>

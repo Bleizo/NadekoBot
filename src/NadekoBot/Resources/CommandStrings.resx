@@ -3779,5 +3779,32 @@
   </data>
   <data name="nsfwclearcache_desc" xml:space="preserve">
     <value>Clears nsfw cache.</value>
+
+  <data name="starmessage_cmd" xml:space="preserve">
+    <value>starmessage starmsg</value>
+  </data>
+  <data name="starmessage_usage" xml:space="preserve">
+    <value>`{0}starmsg messageId`</value>
+  </data>
+  <data name="starmessage_desc" xml:space="preserve">
+    <value>Stars a message by the given message id.</value>
+  </data>
+  <data name="setstarsrequired_cmd" xml:space="preserve">
+    <value>setstarsrequired</value>
+  </data>
+  <data name="setstarsrequired_usage" xml:space="preserve">
+    <value>`{0}setstarsrequired amount`</value>
+  </data>
+  <data name="setstarsrequired_desc" xml:space="preserve">
+    <value>Sets the amount of stars required for a post to get starred.</value>
+  </data>
+  <data name="starchannel_cmd" xml:space="preserve">
+    <value>starchannel</value>
+  </data>
+  <data name="starchannel_usage" xml:space="preserve">
+    <value>`{0}starchannel #chnl-mention`</value>
+  </data>
+  <data name="starchannel_desc" xml:space="preserve">
+    <value>Sets the star channel for this server.</value>
   </data>
 </root>

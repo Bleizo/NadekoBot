@@ -44,8 +44,13 @@ namespace NadekoBot.Services.Database
         public DbSet<UserPokeTypes> PokeGame { get; set; }
         public DbSet<WaifuUpdate> WaifuUpdates { get; set; }
         public DbSet<Warning> Warnings { get; set; }
+
         public DbSet<UserXpStats> UserXpStats { get; set; }
         public DbSet<ClubInfo> Clubs { get; set; }
+
+        public DbSet<StarGuild> StarGuilds { get; set; }
+        public DbSet<StarMessage> StarMessages { get; set; }
+
 
         //logging
         public DbSet<LogSetting> LogSettings { get; set; }
@@ -209,6 +214,14 @@ namespace NadekoBot.Services.Database
                 .HasOne(p => p.Next)
                 .WithOne(p => p.Previous)
                 .IsRequired(false);
+            #endregion
+
+            #region Starboard
+            var starGuildEntity = modelBuilder.Entity<StarGuild>();
+            starGuildEntity
+                .HasMany(g => g.StarMessages)
+                .WithOne(m => m.Guild)
+                .IsRequired();
             #endregion
 
             #region LogSettings

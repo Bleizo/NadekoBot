@@ -7537,6 +7537,33 @@ namespace NadekoBot.Resources {
                 return ResourceManager.GetString("setrole_usage", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///    Looks up a localized string similar to setstarsrequired.
+        /// </summary>
+        public static string setstarsrequired_cmd {
+            get {
+                return ResourceManager.GetString("setstarsrequired_cmd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Sets the amount of stars required for a post to get starred.
+        /// </summary>
+        public static string setstarsrequired_desc {
+            get {
+                return ResourceManager.GetString("setstarsrequired_desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to `{0}setstarsrequired amount`.
+        /// </summary>
+        public static string setstarsrequired_usage {
+            get {
+                return ResourceManager.GetString("setstarsrequired_usage", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///    Looks up a localized string similar to setstatus.
@@ -8294,6 +8321,60 @@ namespace NadekoBot.Resources {
             }
         }
         
+        /// <summary>
+        ///    Looks up a localized string similar to starchannel.
+        /// </summary>
+        public static string starchannel_cmd {
+            get {
+                return ResourceManager.GetString("starchannel_cmd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Sets the star channel for this server.
+        /// </summary>
+        public static string starchannel_desc {
+            get {
+                return ResourceManager.GetString("starchannel_desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to `{0}starchannel #chnl-mention`.
+        /// </summary>
+        public static string starchannel_usage {
+            get {
+                return ResourceManager.GetString("starchannel_usage", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///    Looks up a localized string similar to starmessage starmsg.
+        /// </summary>
+        public static string starmessage_cmd {
+            get {
+                return ResourceManager.GetString("starmessage_cmd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Stars a message by the given message id.
+        /// </summary>
+        public static string starmessage_desc {
+            get {
+                return ResourceManager.GetString("starmessage_desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to `{0}starmsg messageId`.
+        /// </summary>
+        public static string starmessage_usage {
+            get {
+                return ResourceManager.GetString("starmessage_usage", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///    Looks up a localized string similar to startevent.
         /// </summary>
